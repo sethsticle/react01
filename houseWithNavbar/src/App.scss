@@ -1,0 +1,19 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /*preventing scrolling */
+  height: 100%;
+}
+
+#root {
+  height: 100%; /* Ensure root container takes full height */
+  width: 100%;
+}
+
+.tempButton {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%); /* Center the button horizontally */
+  z-index: 101; /* Ensure the button is on top of the navbar and canvas */
+}

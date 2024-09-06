@@ -1,0 +1,31 @@
+.navbar {
+    background-color: none;
+    height: 0px;
+    justify-content: flex-start;
+    padding-left: 2rem;
+    align-items: center;
+    display: flex;
+    position: fixed;  /* Keep navbar in place */
+    z-index: 100;  /* Ensure it stays on top */
+  }
+  
+  .nav-menu {
+    background-color: white;
+    width: 12rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    position: fixed;  /* Ensure sidebar stays fixed */
+    top: 0;
+    left: -100%;  /* Initially hidden */
+    transition: 350ms;
+    z-index: 100;  /* Keep on top of the canvas */
+  }
+  
+  .nav-menu.active {
+    left: 0%;
+    transition: 350ms;
+    z-index: 100;  /* Keep on top of the canvas */
+  }
+  
