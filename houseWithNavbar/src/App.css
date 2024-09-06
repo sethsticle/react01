@@ -3,6 +3,7 @@ html, body {
   padding: 0;
   overflow: hidden; /*preventing scrolling */
   height: 100%;
+  width: 100%;
 }
 
 #root {
@@ -17,3 +18,9 @@ html, body {
   transform: translateX(-50%); /* Center the button horizontally */
   z-index: 101; /* Ensure the button is on top of the navbar and canvas */
 }/*# sourceMappingURL=App.css.map */
+
+.canvas-wrapper {
+  height: 100vh; /* Full viewport height for the canvas */
+  width: 100vw; /* Full viewport width for the canvas */
+  position: relative; /* Ensure it doesn't shift */
+}
