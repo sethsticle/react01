@@ -1,16 +1,20 @@
-import { useRef } from "react";
+import { useRef, forwardRef } from "react";
 import { useGLTF } from "@react-three/drei";
+import { useFrame } from "@react-three/fiber";
 
-function Model() {
+
+const Model = forwardRef((props, ref) => {
+
   const { scene } = useGLTF("/bmwRender.glb");
-  const modelRef = useRef();
-
   // Adjust model position if necessary
-  scene.position.set(0, -5.8, 0);
+    scene.position.set(0, -5.8, 0);
 
-  return (
-    <primitive object={scene} ref={modelRef} />
-  );
-}
+    return (
+      <group ref={ref} {...props} >
+      <primitive object={scene} />
+      </group>
+    );
+})
 
+ 
 export default Model;
