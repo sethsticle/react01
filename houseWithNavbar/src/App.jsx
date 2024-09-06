@@ -8,7 +8,7 @@ import CanvasComponent from './components/CanvasComponent'; // New component
 //import Sidebar from './components/Sidebar'; // Assuming Sidebar is a new component
 
 function App() {
-  const [sidebar, setSidebar] = useState(true);
+  const [sidebar, setSidebar] = useState(false);
   const [selectedData, setSelectedData] = useState(NavbarData[0]); // Default to first item
   const [activeId, setActiveId] = useState(null); // Track currently active bounding box ID
   const [loading, setLoading] = useState(true);
